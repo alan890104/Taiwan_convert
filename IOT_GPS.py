@@ -1,23 +1,7 @@
-
-'''
-pip install wheel
-pip install pipwin
-
-pipwin install numpy
-pipwin install pandas
-pipwin install shapely
-pipwin install gdal
-pipwin install fiona
-pipwin install pyproj
-pipwin install six
-pipwin install rtree
-pipwin install geopandas
-'''
-
-
 import fiona
 from shapely.geometry import shape, Point
 import os
+
 
 def search(longitude=120.999686 , latitude=24.7851415 ):  #尋找鄉鎮
     global areas, townnames
@@ -26,8 +10,8 @@ def search(longitude=120.999686 , latitude=24.7851415 ):  #尋找鄉鎮
                  if areas[town_id].contains(Point(longitude, latitude))),None)
 
 
-def your_location(longitude=120.999686 , latitude=24.7851415):
 
+def your_location(longitude=120.999686 , latitude=24.7851415):
     global areas,townnames
 
     dir = os.path.dirname(__file__)
@@ -48,6 +32,7 @@ def your_location(longitude=120.999686 , latitude=24.7851415):
         print(location) #台灣NO.1
     
     return location #location 有可能是 None
+
 
 
 if __name__ == '__main__':
