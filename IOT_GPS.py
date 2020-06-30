@@ -25,12 +25,12 @@ def your_location(longitude=120.999686 , latitude=24.7851415):
         townnames[town_id] = township['properties']['COUNTYNAME'] + ',' + township['properties']['TOWNNAME'] #search函式傳回值
     
     location = search(longitude,latitude)
-
+    '''
     if location == None:
         print('{0:4g}\t{1:4g} is not in Taiwan'.format(longitude,latitude)) #把台灣當嗽嘎左耶喔
     else:
         print(location) #台灣NO.1
-    
+    '''
     return location #location 有可能是 None
 
 
